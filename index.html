@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!--boxicons  -->
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+	<!-- AOS Animation Library -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!--title logo-->
 	<link rel="icon" href="img/GIMZR.png" type="image/png">
 </head>
@@ -20,6 +22,9 @@
  
 	<header>
 		<a href="#" class="logo"><span>GimzR</span></a>
+		<div class="theme-toggle" id="theme-toggle">
+			<i class="bx bx-moon" id="theme-icon"></i>
+		</div>
 		<div class="bx bx-menu" id="menu-icon"></div>
 
 		<ul class="navbar">
@@ -35,11 +40,16 @@
 	<!-- Home Section Start-->
 	<section class="home" id="home">
 		<div class="home-text">
-			<h4>Hey</h4>
-			<h1>I'M <br>Gokul<span>Raj</span></h1>
-			<h3>Developer & UI/UX Designer</h3>
+			<h4 data-aos="fade-up" data-aos-delay="100">Hey</h4>
+			<h1 data-aos="fade-up" data-aos-delay="200">I'M <br>Gokul<span>Raj</span></h1>
+			<h3 data-aos="fade-up" data-aos-delay="300">Developer & UI/UX Designer</h3>
 			
-			<a href="#about" class="btn">About Me</a>
+			<a href="#about" class="btn" data-aos="fade-up" data-aos-delay="400">About Me</a>
+		</div>
+		<div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+			<div class="scroll-arrow">
+				<i class="bx bx-chevron-down"></i>
+			</div>
 		</div>
 	</section>
 	<!-- Home Section End-->
@@ -48,142 +58,340 @@
 	<!-- About Section Start-->
 	<section class="about" id="about">
 		<div class="about-img">
-			<img src="img/abt.png" alt="">
-
+			<img src="img/abt.png" alt="" data-aos="fade-right" data-aos-delay="200" loading="lazy">
+			<div class="about-img-overlay" data-aos="fade-right" data-aos-delay="300"></div>
 		</div>
 		<div class="about-content">
-			<h2>About Me</h2>
-			<h4>Hello, I'M Here To Help In Your Next Project</h4>
-			<p>I am Gokul Raj , a Final year B.Tech student specializing in Artificial Intelligence & Data Science. I am currently seeking a job opportunity in the role of Front-End Developer and Mobile App Developer.
+			<h2 data-aos="fade-left" data-aos-delay="100">About Me</h2>
+			<h4 data-aos="fade-left" data-aos-delay="200">Hello, I'M Here To Help In Your Next Project</h4>
+			<p data-aos="fade-left" data-aos-delay="300">I am Gokul Raj , a Final year B.Tech student specializing in Artificial Intelligence & Data Science. I am currently seeking a job opportunity in the role of Front-End Developer and Mobile App Developer.
 			</p>
-			<a href="img/DA resume.pdf"Download class="btn">Download Cv</a>
+			<a href="img/DA resume.pdf" download class="btn" data-aos="fade-left" data-aos-delay="400">Download CV</a>
 		</div>
-
 	</section>
 	<!-- About Section End-->
 
+	<!-- Skills Section Start -->
+	<section class="skills" id="skills">
+		<div class="heading" data-aos="fade-up">
+			<h2>My Skills</h2>
+			<h4>Technical Expertise</h4>
+		</div>
+		<div class="skills-content">
+			<div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+				<h3>Frontend Development</h3>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>HTML/CSS</span>
+						<span>90%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="90"></div>
+					</div>
+				</div>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>JavaScript</span>
+						<span>85%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="85"></div>
+					</div>
+				</div>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>React</span>
+						<span>80%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="80"></div>
+					</div>
+				</div>
+			</div>
+			<div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+				<h3>Data Science & Analytics</h3>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>Python</span>
+						<span>88%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="88"></div>
+					</div>
+				</div>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>SQL</span>
+						<span>85%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="85"></div>
+					</div>
+				</div>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>Power BI</span>
+						<span>82%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="82"></div>
+					</div>
+				</div>
+			</div>
+			<div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+				<h3>Design & Tools</h3>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>UI/UX Design</span>
+						<span>87%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="87"></div>
+					</div>
+				</div>
+				<div class="skill-item">
+					<div class="skill-info">
+						<span>Figma</span>
+						<span>85%</span>
+					</div>
+					<div class="skill-bar">
+						<div class="skill-progress" data-width="85"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Skills Section End -->
+
+	<!-- Timeline Section Start -->
+	<section class="timeline" id="timeline">
+		<div class="heading" data-aos="fade-up">
+			<h2>My Journey</h2>
+			<h4>Education & Achievements</h4>
+		</div>
+		<div class="timeline-content">
+			<div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+				<div class="timeline-dot"></div>
+				<div class="timeline-card">
+					<div class="timeline-year">2021 - 2025</div>
+					<h3>B.Tech in AI & Data Science</h3>
+					<p>Final year student specializing in Artificial Intelligence and Data Science with focus on machine learning and web development.</p>
+				</div>
+			</div>
+			<div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+				<div class="timeline-dot"></div>
+				<div class="timeline-card">
+					<div class="timeline-year">2023</div>
+					<h3>Frontend Development Certification</h3>
+					<p>Completed advanced frontend development course with focus on modern frameworks and responsive design.</p>
+				</div>
+			</div>
+			<div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+				<div class="timeline-dot"></div>
+				<div class="timeline-card">
+					<div class="timeline-year">2024</div>
+					<h3>UI/UX Design Projects</h3>
+					<p>Successfully completed multiple UI/UX design projects for various clients, focusing on user-centered design principles.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Timeline Section End -->
+
 	<!-- Services Section Start-->
 	<section class="services" id="services">
-		<div class="heading">
+		<div class="heading" data-aos="fade-up">
 			<h2>My Services</h2>
-			<h4>Better Expericences</h4>
-
+			<h4>Better Experiences</h4>
 		</div>
 		<div class="services-content">
-			<div class="box">
-				<img src="img/Ui Ux service.png" alt="">
+			<div class="box glass-card" data-aos="fade-up" data-aos-delay="100">
+				<div class="service-icon">
+					<img src="img/Ui Ux service.png" alt="" loading="lazy">
+				</div>
 				<h3>UI & UX Design</h3>
-				<p>we specialize in providing top-notch UI (User Interface) and UX (User Experience) services to help businesses create exceptional digital experiences for their customers.</p>
+				<p>We specialize in providing top-notch UI (User Interface) and UX (User Experience) services to help businesses create exceptional digital experiences for their customers.</p>
+				<div class="service-overlay"></div>
 			</div>
-			<div class="box">
-				<img src="img/Webdev service.png" alt="">
+			<div class="box glass-card" data-aos="fade-up" data-aos-delay="200">
+				<div class="service-icon">
+					<img src="img/Webdev service.png" alt="" loading="lazy">
+				</div>
 				<h3>Web App Development</h3>
-				<p>we specialize in providing high-quality web development services that help businesses create highly functional, responsive, and scalable websites and web applications</p>
+				<p>We specialize in providing high-quality web development services that help businesses create highly functional, responsive, and scalable websites and web applications.</p>
+				<div class="service-overlay"></div>
 			</div>
-			<div class="box">
-				<img src="img/DA service.png" alt="">
-				<h3>Data Anlaytics</h3>
-				<p>we offer comprehensive brand design services that help businesses create a strong and unique brand identity that stands out in today's competitive market.</p>
+			<div class="box glass-card" data-aos="fade-up" data-aos-delay="300">
+				<div class="service-icon">
+					<img src="img/DA service.png" alt="" loading="lazy">
+				</div>
+				<h3>Data Analytics</h3>
+				<p>We offer comprehensive data analytics services that help businesses make data-driven decisions and gain valuable insights from their data.</p>
+				<div class="service-overlay"></div>
 			</div>
 		</div>
-
 	</section>
 	<!-- Services Section End -->
 
 
 	<!-- Portfolio Section start -->
 	<section class="portfolio" id="portfolio">
-		<div class="heading">
+		<div class="heading" data-aos="fade-up">
 			<h2>My Portfolio</h2>
 			<h4>Some Of My Works</h4>
-
+		</div>
+		<div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
+			<button class="filter-btn active" data-filter="all">All</button>
+			<button class="filter-btn" data-filter="web">Web Development</button>
+			<button class="filter-btn" data-filter="data">Data Analytics</button>
+			<button class="filter-btn" data-filter="design">UI/UX Design</button>
+			<button class="filter-btn" data-filter="tools">Tools & Office</button>
 		</div>
 		<div class="portfolio-content">
-			<div class="port">
-				<img src="img/dashboard.png" alt="">
-				<div class="main-box">
-					<div class="box-text">
-						<h5>Power Bi & Tableau</h5>
-					</div>
-					<div class="box-icon">
-						<i class="bx bx-heart"></i>
+			<div class="port glass-card" data-category="data" data-aos="fade-up" data-aos-delay="100">
+				<div class="port-image">
+					<img src="img/dashboard.png" alt="" loading="lazy">
+					<div class="port-overlay">
+						<div class="port-links">
+							<a href="#" class="port-link"><i class="bx bx-link-external"></i></a>
+							<a href="#" class="port-link"><i class="bx bx-show"></i></a>
+						</div>
 					</div>
 				</div>
-				<h3> Dashboard Creation</h3>
+				<div class="port-content">
+					<div class="main-box">
+						<div class="box-text">
+							<h5>Power BI & Tableau</h5>
+						</div>
+						<div class="box-icon">
+							<i class="bx bx-heart"></i>
+						</div>
+					</div>
+					<h3>Dashboard Creation</h3>
+				</div>
 			</div>
-			<div class="port">
-				<img src="img/web tool.jpeg" alt="">
-				<div class="main-box">
-					<div class="box-text">
-						<h5>HTML & CSS & JAVA SCRIPT</h5>
-					</div>
-					<div class="box-icon">
-						<i class="bx bx-heart"></i>
+			<div class="port glass-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+				<div class="port-image">
+					<img src="img/web tool.jpeg" alt="" loading="lazy">
+					<div class="port-overlay">
+						<div class="port-links">
+							<a href="#" class="port-link"><i class="bx bx-link-external"></i></a>
+							<a href="#" class="port-link"><i class="bx bx-show"></i></a>
+						</div>
 					</div>
 				</div>
-				<h3>Website Development </h3>
+				<div class="port-content">
+					<div class="main-box">
+						<div class="box-text">
+							<h5>HTML & CSS & JavaScript</h5>
+						</div>
+						<div class="box-icon">
+							<i class="bx bx-heart"></i>
+						</div>
+					</div>
+					<h3>Website Development</h3>
+				</div>
 			</div>
-			<div class="port">
-				<img src="img/Ms office.jpeg" alt="">
-				<div class="main-box">
-					<div class="box-text">
-						<h5>MS-Office</h5>
-					</div>
-					<div class="box-icon">
-						<i class="bx bx-heart"></i>
+			<div class="port glass-card" data-category="tools" data-aos="fade-up" data-aos-delay="300">
+				<div class="port-image">
+					<img src="img/Ms office.jpeg" alt="" loading="lazy">
+					<div class="port-overlay">
+						<div class="port-links">
+							<a href="#" class="port-link"><i class="bx bx-link-external"></i></a>
+							<a href="#" class="port-link"><i class="bx bx-show"></i></a>
+						</div>
 					</div>
 				</div>
-				<h3>Presentation Design & Data works</h3>
+				<div class="port-content">
+					<div class="main-box">
+						<div class="box-text">
+							<h5>MS-Office</h5>
+						</div>
+						<div class="box-icon">
+							<i class="bx bx-heart"></i>
+						</div>
+					</div>
+					<h3>Presentation Design & Data Works</h3>
+				</div>
 			</div>
-			<div class="port">
-				<img src="img/Ui&ux.png" alt="">
-				<div class="main-box">
-					<div class="box-text">
-						<h5>FIGMA</h5>
-					</div>
-					<div class="box-icon">
-						<i class="bx bx-heart"></i>
+			<div class="port glass-card" data-category="design" data-aos="fade-up" data-aos-delay="100">
+				<div class="port-image">
+					<img src="img/Ui&ux.png" alt="" loading="lazy">
+					<div class="port-overlay">
+						<div class="port-links">
+							<a href="#" class="port-link"><i class="bx bx-link-external"></i></a>
+							<a href="#" class="port-link"><i class="bx bx-show"></i></a>
+						</div>
 					</div>
 				</div>
-				<h3>UI & UX Design</h3>
+				<div class="port-content">
+					<div class="main-box">
+						<div class="box-text">
+							<h5>FIGMA</h5>
+						</div>
+						<div class="box-icon">
+							<i class="bx bx-heart"></i>
+						</div>
+					</div>
+					<h3>UI & UX Design</h3>
+				</div>
 			</div>
-			<div class="port">
-				<img src="img/python.png" alt="">
-				<div class="main-box">
-					<div class="box-text">
-						<h5>PYTHON</h5>
-					</div>
-					<div class="box-icon">
-						<i class="bx bx-heart"></i>
+			<div class="port glass-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+				<div class="port-image">
+					<img src="img/python.png" alt="" loading="lazy">
+					<div class="port-overlay">
+						<div class="port-links">
+							<a href="#" class="port-link"><i class="bx bx-link-external"></i></a>
+							<a href="#" class="port-link"><i class="bx bx-show"></i></a>
+						</div>
 					</div>
 				</div>
-				<h3>Error correction & Project Development</h3>
+				<div class="port-content">
+					<div class="main-box">
+						<div class="box-text">
+							<h5>PYTHON</h5>
+						</div>
+						<div class="box-icon">
+							<i class="bx bx-heart"></i>
+						</div>
+					</div>
+					<h3>Error Correction & Project Development</h3>
+				</div>
 			</div>
-			<div class="port">
-				<img src="img/Sql.jpeg" alt="">
-				<div class="main-box">
-					<div class="box-text">
-						<h5>SQL</h5>
-					</div>
-					<div class="box-icon">
-						<i class="bx bx-heart"></i>
+			<div class="port glass-card" data-category="data" data-aos="fade-up" data-aos-delay="300">
+				<div class="port-image">
+					<img src="img/Sql.jpeg" alt="" loading="lazy">
+					<div class="port-overlay">
+						<div class="port-links">
+							<a href="#" class="port-link"><i class="bx bx-link-external"></i></a>
+							<a href="#" class="port-link"><i class="bx bx-show"></i></a>
+						</div>
 					</div>
 				</div>
-				<h3>BackEnd Development & Database works</h3>
+				<div class="port-content">
+					<div class="main-box">
+						<div class="box-text">
+							<h5>SQL</h5>
+						</div>
+						<div class="box-icon">
+							<i class="bx bx-heart"></i>
+						</div>
+					</div>
+					<h3>Backend Development & Database Works</h3>
+				</div>
 			</div>
 		</div>
 	</section>
-
 	<!-- Portfolio Section End -->
 
 
 	<!-- Contact Section Start -->
 	<section id="contact" class="contact">
-		<div class="contact-text">
+		<div class="contact-text" data-aos="fade-right">
 			<h2>Contact Me</h2>
 
 			<h4>Contact With Us Any Time</h4>
-			<p>Any help in  projects & Startup ideas all will be prioritized</p>
+			<p>Any help in projects & Startup ideas all will be prioritized</p>
 			<div class="contact-list">
 				<li>Location : Chennai, India</li>
 				<li>Gmail : gimzrofficial@gmail.com</li>
@@ -196,8 +404,8 @@
 
 			</div>
 		</div>
-		<div class="contact-form">
-			<form name="submit-to-google-sheet">
+		<div class="contact-form" data-aos="fade-left">
+			<form name="submit-to-google-sheet" id="contact-form">
 				<input type="text"  name = "Name" placeholder="Your Name" required>
 				<input type="email"  name = "Email" placeholder="Your Email" required>
 				
@@ -205,6 +413,10 @@
 				<button type="submit"  class="btn btn2">Submit</button>
 
 			</form>
+			<div class="form-status">
+				<div class="success-message" id="success-message">Message sent successfully! ✓</div>
+				<div class="error-message" id="error-message">Something went wrong. Please try again.</div>
+			</div>
 			<span id="msg"></span>
 		</div>
 	</section>
@@ -229,6 +441,8 @@
 		</div>
 	</div>
 
+	<!-- AOS Animation Library -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<!---custom js link--->
 	<script src="script.js"></script>
 	<script>
@@ -238,13 +452,18 @@
 		form.addEventListener('submit', e => {
 		  e.preventDefault()
 		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => { msg.innerHTML="Message Sent Successfully "} )
+			.then(response => { 
+				document.getElementById('success-message').style.display = 'block';
+				setTimeout(() => document.getElementById('success-message').style.display = 'none', 3000);
+			})
+			.catch(error => {
+				document.getElementById('error-message').style.display = 'block';
+				setTimeout(() => document.getElementById('error-message').style.display = 'none', 3000);
+			})
 			setTimeout(function(){
 				msg.innerHTML=" "
 			},5000)
 			form.reset()
-			
-			.catch(error => console.error('Error!', error.message))
 		})
 	  </script>
 	
