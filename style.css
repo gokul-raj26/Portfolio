@@ -64,29 +64,39 @@ body {
 }
 
 /* Custom cursor */
+
+body {
+  /* Hide the default system cursor so only your custom one shows */
+  cursor: none;
+}
 .cursor {
-	position: fixed;
-	width: 20px;
-	height: 20px;
-	background: var(--main-color);
-	border-radius: 50%;
-	pointer-events: none;
-	z-index: 9999;
-	transition: transform 0.1s ease;
-	mix-blend-mode: difference;
+  position: fixed;        /* Needed for manual positioning */
+  top: 0;                 /* MUST add: anchors at top */
+  left: 0;                /* MUST add: anchors at left */
+  width: 20px;
+  height: 20px;
+  background: var(--main-color); /* This was invisible if --main-color not set */
+  border-radius: 50%;
+  pointer-events: none;   /* Prevent blocking clicks */
+  z-index: 9999;          /* Ensure it's above everything */
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference; /* Optional cool effect */
 }
 
 .cursor-follower {
-	position: fixed;
-	width: 40px;
-	height: 40px;
-	border: 2px solid var(--main-color);
-	border-radius: 50%;
-	pointer-events: none;
-	z-index: 9998;
-	transition: transform 0.2s ease;
-	opacity: 0.5;
+  position: fixed;        /* Needed for transform to work */
+  top: 0;                 /* MUST add */
+  left: 0;                /* MUST add */
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.2s ease;
+  opacity: 0.5;
 }
+
 
 /* Smooth scrolling */
 html {
@@ -1121,8 +1131,9 @@ header.sticky {
 .contact {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	align-items: center;
+	align-items: flex-start;
 	gap: 3rem;
+	padding: 3rem 2rem;
 }
 
 .contact-text h4 {
@@ -1216,6 +1227,7 @@ header.sticky {
 /* Contact form */
 .contact-form form {
 	position: relative;
+	
 }
 
 .input-group {
