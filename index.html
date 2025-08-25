@@ -566,80 +566,36 @@
 		</div>
 	</div>
 
-	<!-- Contact Section Start -->
 	<section id="contact" class="contact">
-		<div class="section-divider">
-			<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-				<path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" fill="var(--main-color)"></path>
-			</svg>
-		</div>
-		<div class="contact-text" data-aos="fade-right">
+		<div class="contact-text">
 			<h2>Contact Me</h2>
 
 			<h4>Contact With Us Any Time</h4>
-			<p>Any help in projects & Startup ideas all will be prioritized</p>
+			<p>Any help in  projects & Startup ideas all will be prioritized</p>
 			<div class="contact-list">
 				<li>Location : Chennai, India</li>
 				<li>Gmail : gimzrofficial@gmail.com</li>
 				<li>Contact : +91 8122016648</li>
 			</div>
-			
-			<!-- Embedded Map -->
-			<div class="map-container" data-aos="fade-right" data-aos-delay="200">
-				<iframe 
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.77490949253!2d79.87929344726562!3d13.048160000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1635789012345!5m2!1sen!2sin" 
-					width="100%" 
-					height="200" 
-					style="border:0; border-radius: 10px;" 
-					allowfullscreen="" 
-					loading="lazy">
-				</iframe>
-			</div>
-			
 			<div class="social-icons">
-				<a href="https://www.linkedin.com/in/gokulraj-gimzr/" class="magnetic-btn"><i class="bx bxl-linkedin pulse-icon"></i></a>
-				<a href="https://github.com/gokul-raj26" class="magnetic-btn"><i class="bx bxl-github pulse-icon"></i></a>
-				<a href="https://www.instagram.com/__r_o_m_e_o__c_o_u_s_i_n_/" class="magnetic-btn"><i class="bx bxl-instagram pulse-icon"></i></a>
+				<a href="https://www.linkedin.com/in/gokulraj-gimzr/"><i class="bx bxl-linkedin"></i></a>
+				<a href="https://github.com/gokul-raj26"><i class="bx bxl-github"></i></a>
+				<a href="https://www.instagram.com/__r_o_m_e_o__c_o_u_s_i_n_/"><i class="bx bxl-instagram"></i></a>
+
 			</div>
 		</div>
-		<div class="contact-form" data-aos="fade-left">
-			<form name="submit-to-google-sheet" id="contact-form">
-				<div class="input-group">
-					<input type="text" name="Name" placeholder="Your Name" required>
-					<span class="input-highlight"></span>
-					<div class="error-message"></div>
-				</div>
-				<div class="input-group">
-					<input type="email" name="Email" placeholder="Your Email" required>
-					<span class="input-highlight"></span>
-					<div class="error-message"></div>
-				</div>
-				<div class="input-group">
-					<textarea name="Message" rows="6" placeholder="Enter Your Message" required></textarea>
-					<span class="input-highlight"></span>
-					<div class="error-message"></div>
-				</div>
+		<div class="contact-form">
+			<form name="submit-to-google-sheet">
+				<input type="text"  name = "Name" placeholder="Your Name" required>
+				<input type="email"  name = "Email" placeholder="Your Email" required>
 				
-				<button type="submit" class="btn magnetic-btn submit-btn">
-					<span class="btn-text">Send Message</span>
-					<span class="btn-loading">Sending...</span>
-					<i class="bx bx-send"></i>
-				</button>
+				<textarea name="Message" rows="6"  placeholder="Enter Your Message"></textarea>
+				<button type="submit"  class="btn btn2">Submit</button>
+
 			</form>
-			
-			<div class="form-status">
-				<div class="success-message" id="success-message">
-					<i class="bx bx-check-circle"></i>
-					Message sent successfully! ✓
-				</div>
-				<div class="error-message" id="error-message">
-					<i class="bx bx-error-circle"></i>
-					Something went wrong. Please try again.
-				</div>
-			</div>
+			<span id="msg"></span>
 		</div>
 	</section>
-	<!-- Contact Section End -->
 	
 	<!-- Scroll to Top Button -->
 	<button class="scroll-to-top magnetic-btn" id="scrollToTop">
@@ -656,43 +612,38 @@
 			<a href="#"><span>Privacy Policy</span></a>-->
 
 		</div>
-		<div class="social-icons">
+		<!--<div class="social-icons">
 			<span>Follow Us:</span>
 			<a href="https://www.linkedin.com/in/gokulraj-gimzr/" class="magnetic-btn"><i class="bx bxl-linkedin pulse-icon"></i></a>
 			<a href="https://github.com/gokul-raj26" class="magnetic-btn"><i class="bx bxl-github pulse-icon"></i></a>
 			<a href="https://www.instagram.com/_gimzr_/" class="magnetic-btn"><i class="bx bxl-instagram pulse-icon"></i></a>
-		</div>
+		</div>-->
 	</div>
 
 	<!-- AOS Animation Library -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<!---custom js link--->
+
 	<script src="script.js"></script>
 	<script>
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbyCTzeRNq09BCFr140zhPH78J__-IDuipUMeCdgxdk00_vYemyuywy03Wop48ZoJ7o/exec'
 		const form = document.forms['submit-to-google-sheet']
-		const submitBtn = form.querySelector('.submit-btn');
-		
+	  const msg=document.getElementById("msg")
+	  
 		form.addEventListener('submit', e => {
-			e.preventDefault()
+		  e.preventDefault()
+
+		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+
+			.then(response => { msg.innerHTML="Message Sent Successfully "} )
+			setTimeout(function(){
+				msg.innerHTML=" "
+			},5000)
+			form.reset()
 			
-			// Show loading state
-			submitBtn.classList.add('loading');
-			
-			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => { 
-				document.getElementById('success-message').style.display = 'block';
-				setTimeout(() => document.getElementById('success-message').style.display = 'none', 3000);
-				submitBtn.classList.remove('loading');
-				form.reset();
-			})
-			.catch(error => {
-				document.getElementById('error-message').style.display = 'block';
-				setTimeout(() => document.getElementById('error-message').style.display = 'none', 3000);
-				submitBtn.classList.remove('loading');
-			})
+			.catch(error => console.error('Error!', error.message))
 		})
-	</script>
+	  </script>
 	
 </body>
 
