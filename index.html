@@ -83,15 +83,12 @@
 	<!-- Navbar Section Start-->
 	<header>
 		<a href="#" class="logo"><span>GimzR</span></a>
-		<div class="theme-toggle" id="theme-toggle">
-			<i class="bx bx-moon" id="theme-icon"></i>
-		</div>
 		<div class="bx bx-menu" id="menu-icon"></div>
 
 		<ul class="navbar">
 			<li><a href="#home">Home</a></li>
 			<li><a href="#about">About Me</a></li>
-			<li><a href="#services">Services</a></li>
+			<li><a href="#skills">Skills</a></li>
 			<li><a href="#portfolio">My Portfolio</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
@@ -119,272 +116,186 @@
 	<!-- About Section Start-->
 	<section class="about" id="about">
 		<div class="about-img">
-			<img src="img/abt.png" alt="" data-aos="fade-right" data-aos-delay="200" loading="lazy">
-			<div class="about-img-overlay" data-aos="fade-right" data-aos-delay="300"></div>
+			<div class="avatar-container" data-aos="fade-right" data-aos-delay="200">
+				<div class="avatar-3d">
+					<div class="avatar-head">
+						<div class="avatar-face">
+							<div class="avatar-eyes">
+								<div class="eye left-eye">
+									<div class="pupil"></div>
+								</div>
+								<div class="eye right-eye">
+									<div class="pupil"></div>
+								</div>
+							</div>
+							<div class="avatar-nose"></div>
+							<div class="avatar-mouth"></div>
+						</div>
+						<div class="avatar-hair"></div>
+					</div>
+					<div class="avatar-body">
+						<div class="avatar-shirt"></div>
+						<div class="avatar-arms">
+							<div class="arm left-arm"></div>
+							<div class="arm right-arm"></div>
+						</div>
+					</div>
+				</div>
+				<div class="avatar-shadow"></div>
+				<div class="floating-particles">
+					<div class="particle"></div>
+					<div class="particle"></div>
+					<div class="particle"></div>
+					<div class="particle"></div>
+					<div class="particle"></div>
+				</div>
+			</div>
 		</div>
 		<div class="about-content">
 			<h2 data-aos="fade-left" data-aos-delay="100">About Me</h2>
 			<h4 data-aos="fade-left" data-aos-delay="200">Hello, I'M Here To Help In Your Next Project</h4>
 			<p data-aos="fade-left" data-aos-delay="300">I am Gokul Raj , a Final year B.Tech student specializing in Artificial Intelligence & Data Science. I am currently seeking a job opportunity in the role of Front-End Developer and Mobile App Developer.
 			</p>
-			<a href="img/DA resume.pdf" download class="btn magnetic-btn download-btn" data-aos="fade-left" data-aos-delay="400"><i class="bx bx-download"></i> Download CV</a>
+			<div class="modern-download-btn" data-aos="fade-left" data-aos-delay="400">
+				<a href="img/DA resume.pdf" download class="modern-btn magnetic-btn">
+					<div class="btn-content">
+						<div class="btn-icon">
+							<i class="bx bx-download"></i>
+						</div>
+						<div class="btn-text">
+							<span class="btn-label">Download</span>
+							<span class="btn-sublabel">Resume PDF</span>
+						</div>
+					</div>
+					<div class="btn-glow"></div>
+				</a>
+			</div>
 		</div>
 	</section>
 	<!-- About Section End-->
 
 	<!-- Skills Section Start -->
 	<section class="skills" id="skills">
-		<div class="section-divider">
-			<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-				<path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="var(--main-color)"></path>
-				<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="var(--main-color)"></path>
-				<path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="var(--main-color)"></path>
-			</svg>
-		</div>
 		<div class="heading" data-aos="fade-up">
 			<h2>My Skills</h2>
 			<h4>Technical Expertise</h4>
 		</div>
-		<div class="skills-content">
-			<div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-				<h3>Frontend Development</h3>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>HTML/CSS</span>
-						<span>90%</span>
-					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="90"></div>
-					</div>
+		<div class="skills-grid">
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+				<div class="skill-icon">
+					<i class="bx bxl-html5"></i>
 				</div>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>JavaScript</span>
-						<span>85%</span>
-					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="85"></div>
-					</div>
-				</div>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>React</span>
-						<span>80%</span>
-					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="80"></div>
+				<h3>HTML5</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="90">90%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 32.67;"/>
+						</svg>
 					</div>
 				</div>
 			</div>
-			<div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-				<h3>Data Science & Analytics</h3>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>Python</span>
-						<span>88%</span>
-					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="88"></div>
-					</div>
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+				<div class="skill-icon">
+					<i class="bx bxl-css3"></i>
 				</div>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>SQL</span>
-						<span>85%</span>
-					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="85"></div>
-					</div>
-				</div>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>Power BI</span>
-						<span>82%</span>
-					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="82"></div>
+				<h3>CSS3</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="88">88%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 39.21;"/>
+						</svg>
 					</div>
 				</div>
 			</div>
-			<div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-				<h3>Design & Tools</h3>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>UI/UX Design</span>
-						<span>87%</span>
-					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="87"></div>
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+				<div class="skill-icon">
+					<i class="bx bxl-javascript"></i>
+				</div>
+				<h3>JavaScript</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="85">85%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 49.01;"/>
+						</svg>
 					</div>
 				</div>
-				<div class="skill-item">
-					<div class="skill-info">
-						<span>Figma</span>
-						<span>85%</span>
+			</div>
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+				<div class="skill-icon">
+					<i class="bx bxl-react"></i>
+				</div>
+				<h3>React</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="80">80%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 65.35;"/>
+						</svg>
 					</div>
-					<div class="skill-bar">
-						<div class="skill-progress" data-width="85"></div>
+				</div>
+			</div>
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+				<div class="skill-icon">
+					<i class="bx bxl-python"></i>
+				</div>
+				<h3>Python</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="88">88%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 39.21;"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+				<div class="skill-icon">
+					<i class="bx bx-data"></i>
+				</div>
+				<h3>SQL</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="85">85%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 49.01;"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="700">
+				<div class="skill-icon">
+					<i class="bx bx-palette"></i>
+				</div>
+				<h3>UI/UX Design</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="87">87%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 42.47;"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="skill-card" data-aos="zoom-in" data-aos-delay="800">
+				<div class="skill-icon">
+					<i class="bx bx-bar-chart-alt-2"></i>
+				</div>
+				<h3>Power BI</h3>
+				<div class="skill-level">
+					<div class="skill-percentage" data-percentage="82">82%</div>
+					<div class="skill-circle">
+						<svg class="progress-ring" width="120" height="120">
+							<circle class="progress-ring-circle" stroke="var(--main-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" style="stroke-dasharray: 326.73; stroke-dashoffset: 58.81;"/>
+						</svg>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Skills Section End -->
-
-	<!-- Timeline Section Start -->
-	<section class="timeline" id="timeline">
-		<div class="section-divider">
-			<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="var(--main-color)"></path>
-			</svg>
-		</div>
-		<div class="heading" data-aos="fade-up">
-			<h2>My Journey</h2>
-			<h4>Education & Achievements</h4>
-		</div>
-		<div class="timeline-content">
-			<div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-				<div class="timeline-dot"></div>
-				<div class="timeline-card">
-					<div class="timeline-year">2021 - 2025</div>
-					<h3>B.Tech in AI & Data Science</h3>
-					<p>Final year student specializing in Artificial Intelligence and Data Science with focus on machine learning and web development.</p>
-				</div>
-			</div>
-			<div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
-				<div class="timeline-dot"></div>
-				<div class="timeline-card">
-					<div class="timeline-year">2023</div>
-					<h3>Frontend Development Certification</h3>
-					<p>Completed advanced frontend development course with focus on modern frameworks and responsive design.</p>
-				</div>
-			</div>
-			<div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
-				<div class="timeline-dot"></div>
-				<div class="timeline-card">
-					<div class="timeline-year">2024</div>
-					<h3>UI/UX Design Projects</h3>
-					<p>Successfully completed multiple UI/UX design projects for various clients, focusing on user-centered design principles.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Timeline Section End -->
-
-	<!-- Stats Section Start -->
-	<section class="stats" id="stats">
-		<div class="stats-content">
-			<div class="stat-item glass-card" data-aos="fade-up" data-aos-delay="100">
-				<div class="stat-number" data-target="50">0</div>
-				<div class="stat-label">Projects Completed</div>
-			</div>
-			<div class="stat-item glass-card" data-aos="fade-up" data-aos-delay="200">
-				<div class="stat-number" data-target="25">0</div>
-				<div class="stat-label">Happy Clients</div>
-			</div>
-			<div class="stat-item glass-card" data-aos="fade-up" data-aos-delay="300">
-				<div class="stat-number" data-target="3">0</div>
-				<div class="stat-label">Years Experience</div>
-			</div>
-			<div class="stat-item glass-card" data-aos="fade-up" data-aos-delay="400">
-				<div class="stat-number" data-target="100">0</div>
-				<div class="stat-label">Code Commits</div>
-			</div>
-		</div>
-	</section>
-	<!-- Stats Section End -->
-
-	<!-- Testimonials Section Start -->
-	<section class="testimonials" id="testimonials">
-		<div class="heading" data-aos="fade-up">
-			<h2>Testimonials</h2>
-			<h4>What People Say</h4>
-		</div>
-		<div class="testimonials-container" data-aos="fade-up" data-aos-delay="200">
-			<div class="testimonial-slider">
-				<div class="testimonial-item glass-card active">
-					<div class="testimonial-content">
-						<p>"Gokul delivered exceptional work on our web development project. His attention to detail and modern design approach exceeded our expectations."</p>
-						<div class="testimonial-author">
-							<div class="author-info">
-								<h4>Sarah Johnson</h4>
-								<span>Project Manager, TechCorp</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-item glass-card">
-					<div class="testimonial-content">
-						<p>"Outstanding UI/UX design skills! Gokul transformed our outdated interface into a modern, user-friendly experience."</p>
-						<div class="testimonial-author">
-							<div class="author-info">
-								<h4>Michael Chen</h4>
-								<span>CEO, StartupXYZ</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-item glass-card">
-					<div class="testimonial-content">
-						<p>"Excellent data analytics work! The dashboards created were intuitive and provided valuable insights for our business."</p>
-						<div class="testimonial-author">
-							<div class="author-info">
-								<h4>Emily Rodriguez</h4>
-								<span>Data Director, Analytics Pro</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="testimonial-nav">
-				<button class="nav-btn active" data-slide="0"></button>
-				<button class="nav-btn" data-slide="1"></button>
-				<button class="nav-btn" data-slide="2"></button>
-			</div>
-		</div>
-	</section>
-	<!-- Testimonials Section End -->
-
-	<!-- Services Section Start-->
-	<section class="services" id="services">
-		<div class="section-divider">
-			<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-				<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="var(--main-color)"></path>
-			</svg>
-		</div>
-		<div class="heading" data-aos="fade-up">
-			<h2>My Services</h2>
-			<h4>Better Experiences</h4>
-		</div>
-		<div class="services-content">
-			<div class="box glass-card tilt-card magnetic-btn" data-aos="fade-up" data-aos-delay="100">
-				<div class="service-icon">
-					<img src="img/Ui Ux service.png" alt="" loading="lazy">
-				</div>
-				<h3>UI & UX Design</h3>
-				<p>We specialize in providing top-notch UI (User Interface) and UX (User Experience) services to help businesses create exceptional digital experiences for their customers.</p>
-				<div class="service-overlay"></div>
-			</div>
-			<div class="box glass-card tilt-card magnetic-btn" data-aos="fade-up" data-aos-delay="200">
-				<div class="service-icon">
-					<img src="img/Webdev service.png" alt="" loading="lazy">
-				</div>
-				<h3>Web App Development</h3>
-				<p>We specialize in providing high-quality web development services that help businesses create highly functional, responsive, and scalable websites and web applications.</p>
-				<div class="service-overlay"></div>
-			</div>
-			<div class="box glass-card tilt-card magnetic-btn" data-aos="fade-up" data-aos-delay="300">
-				<div class="service-icon">
-					<img src="img/DA service.png" alt="" loading="lazy">
-				</div>
-				<h3>Data Analytics</h3>
-				<p>We offer comprehensive data analytics services that help businesses make data-driven decisions and gain valuable insights from their data.</p>
-				<div class="service-overlay"></div>
-			</div>
-		</div>
-	</section>
-	<!-- Services Section End -->
-
 
 	<!-- Portfolio Section start -->
 	<section class="portfolio" id="portfolio">
@@ -567,6 +478,11 @@
 	</div>
 
 	<section id="contact" class="contact">
+		<div class="animated-bg-elements">
+			<div class="bg-circle circle-1"></div>
+			<div class="bg-circle circle-2"></div>
+			<div class="bg-circle circle-3"></div>
+		</div>
 		<div class="contact-text">
 			<h2>Contact Me</h2>
 
