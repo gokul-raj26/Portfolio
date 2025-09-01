@@ -101,38 +101,6 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-// Theme toggle functionality
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const body = document.body;
-
-// Check for saved theme preference or default to 'dark'
-const currentTheme = localStorage.getItem('theme') || 'dark';
-body.setAttribute('data-theme', currentTheme);
-
-// Update icon based on current theme
-if (currentTheme === 'light') {
-    themeIcon.classList.replace('bx-moon', 'bx-sun');
-}
-
-themeToggle.addEventListener('click', () => {
-    themeToggle.classList.add('rotating');
-    setTimeout(() => themeToggle.classList.remove('rotating'), 500);
-    
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Update icon
-    if (newTheme === 'light') {
-        themeIcon.classList.replace('bx-moon', 'bx-sun');
-    } else {
-        themeIcon.classList.replace('bx-sun', 'bx-moon');
-    }
-});
-
 // Magnetic button effect
 const magneticBtns = document.querySelectorAll('.magnetic-btn');
 
@@ -176,57 +144,6 @@ tiltCards.forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
     });
 });
-
-// Stats counter animation
-const statNumbers = document.querySelectorAll('.stat-number');
-
-const animateStats = () => {
-    statNumbers.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-target'));
-        const increment = target / 100;
-        let current = 0;
-        
-        const updateCounter = () => {
-            if (current < target) {
-                current += increment;
-                stat.textContent = Math.ceil(current);
-                setTimeout(updateCounter, 20);
-            } else {
-                stat.textContent = target;
-            }
-        };
-        
-        updateCounter();
-    });
-};
-
-// Testimonials slider
-const testimonialItems = document.querySelectorAll('.testimonial-item');
-const navBtns = document.querySelectorAll('.nav-btn');
-let currentTestimonial = 0;
-
-function showTestimonial(index) {
-    testimonialItems.forEach((item, i) => {
-        item.classList.toggle('active', i === index);
-    });
-    
-    navBtns.forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-    });
-}
-
-navBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        currentTestimonial = index;
-        showTestimonial(currentTestimonial);
-    });
-});
-
-// Auto-rotate testimonials
-setInterval(() => {
-    currentTestimonial = (currentTestimonial + 1) % testimonialItems.length;
-    showTestimonial(currentTestimonial);
-}, 5000);
 
 // Project modal functionality
 const projectData = {
@@ -341,44 +258,32 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Skill bars animation
-const skillBars = document.querySelectorAll('.skill-progress');
-
-const animateSkillBars = () => {
-    skillBars.forEach(bar => {
-        const width = bar.getAttribute('data-width');
-        bar.style.width = width + '%';
-    });
-};
-
-// Intersection Observer for skill bars
+// Skill circles animation
 const skillsSection = document.querySelector('.skills');
 const skillsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            animateSkillBars();
+            animateSkillCircles();
             skillsObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
-if (skillsSection) {
-    skillsObserver.observe(skillsSection);
+function animateSkillCircles() {
+    const skillCards = document.querySelectorAll('.skill-card');
+    skillCards.forEach((card, index) => {
+        setTimeout(() => {
+            const circle = card.querySelector('.progress-ring-circle');
+            const percentage = card.querySelector('.skill-percentage').getAttribute('data-percentage');
+            const circumference = 2 * Math.PI * 52;
+            const offset = circumference - (percentage / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+        }, index * 200);
+    });
 }
 
-// Stats animation observer
-const statsSection = document.querySelector('.stats');
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateStats();
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-if (statsSection) {
-    statsObserver.observe(statsSection);
+if (skillsSection) {
+    skillsObserver.observe(skillsSection);
 }
 
 // Scroll to top button
@@ -428,6 +333,53 @@ const imageObserver = new IntersectionObserver((entries) => {
 images.forEach(img => {
     imageObserver.observe(img);
 });
+
+// Avatar eye tracking
+document.addEventListener('mousemove', (e) => {
+    const eyes = document.querySelectorAll('.pupil');
+    const avatar = document.querySelector('.avatar-3d');
+    
+    if (avatar) {
+        const rect = avatar.getBoundingClientRect();
+        const avatarCenterX = rect.left + rect.width / 2;
+        const avatarCenterY = rect.top + rect.height / 2;
+        
+        const angle = Math.atan2(e.clientY - avatarCenterY, e.clientX - avatarCenterX);
+        const distance = Math.min(5, Math.sqrt(Math.pow(e.clientX - avatarCenterX, 2) + Math.pow(e.clientY - avatarCenterY, 2)) / 50);
+        
+        eyes.forEach(eye => {
+            const x = Math.cos(angle) * distance;
+            const y = Math.sin(angle) * distance;
+            eye.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+        });
+    }
+});
+
+// Enhanced floating elements animation
+function createFloatingElements() {
+    const container = document.querySelector('.floating-elements');
+    if (!container) return;
+    
+    for (let i = 0; i < 3; i++) {
+        const element = document.createElement('div');
+        element.className = 'floating-element';
+        element.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 100 + 50}px;
+            height: ${Math.random() * 100 + 50}px;
+            background: linear-gradient(45deg, rgba(0, 247, 255, 0.1), rgba(0, 247, 255, 0.05));
+            border-radius: 50%;
+            top: ${Math.random() * 100}%;
+            left: ${Math.random() * 100}%;
+            animation: floatRandom ${Math.random() * 10 + 15}s ease-in-out infinite;
+            animation-delay: ${Math.random() * 5}s;
+        `;
+        container.appendChild(element);
+    }
+}
+
+// Initialize floating elements
+createFloatingElements();
 
 // Enhanced form validation
 const contactForm = document.getElementById('contact-form');
